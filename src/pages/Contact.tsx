@@ -58,24 +58,24 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-[120px]">
+      <main className="pt-[112px] sm:pt-[120px]">
         {/* Page Header */}
-        <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Contact Us</h1>
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto px-4">
               Let's discuss how we can help grow your travel business
             </p>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20">
+        <section className="py-12 sm:py-16 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
               {/* Contact Form */}
               <div>
-                <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
