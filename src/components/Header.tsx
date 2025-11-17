@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <>
       {/* Sticky Notice Bar */}
-      <div className={`bg-accent text-accent-foreground py-2 px-4 fixed top-0 left-0 right-0 z-50 ${isMobileMenuOpen ? 'hidden' : ''}`}>
+      <div className={`bg-accent text-accent-foreground py-2 px-4 fixed top-0 left-0 right-0 z-50 max-[1000px]:hidden ${isMobileMenuOpen ? 'hidden' : ''}`}>
         <div className="container mx-auto flex items-center justify-center gap-2 text-sm">
           <AlertCircle className="w-4 h-4 flex-shrink-0" />
           <p className="text-center">
@@ -46,7 +46,9 @@ const Header = () => {
 
       {/* Main Header */}
       <header
-        className={`fixed top-8 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed left-0 right-0 transition-all duration-300 max-[1000px]:top-0 top-8 ${
+          isMobileMenuOpen ? 'z-50 bg-background/95 backdrop-blur-md shadow-sm' : 'z-40'
+        } ${
           isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-background"
         }`}
       >
@@ -99,8 +101,12 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className="lg:hidden py-4 border-t">
+          <div
+            className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+              isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="py-4 border-t animate-slide-in-right">
               <nav className="flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <Link
@@ -130,7 +136,7 @@ const Header = () => {
                 </div>
               </nav>
             </div>
-          )}
+          </div>
         </div>
       </header>
     </>
