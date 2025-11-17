@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <>
       {/* Sticky Notice Bar */}
-      <div className="bg-accent text-accent-foreground py-2 px-4 fixed top-0 left-0 right-0 z-50">
+      <div className={`bg-accent text-accent-foreground py-2 px-4 fixed top-0 left-0 right-0 z-50 ${isMobileMenuOpen ? 'hidden' : ''}`}>
         <div className="container mx-auto flex items-center justify-center gap-2 text-sm">
           <AlertCircle className="w-4 h-4 flex-shrink-0" />
           <p className="text-center">
