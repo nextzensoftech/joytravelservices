@@ -26,9 +26,15 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <img src={logo} alt="Joy Travel Services" className="h-12 w-auto mb-4" />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mb-4">
               Empowering travel agencies with digital growth solutions.
             </p>
+            <div className="bg-accent/10 border border-accent/20 rounded-lg p-4 mb-4">
+              <p className="text-xs text-foreground font-medium">
+                <strong>Important:</strong> Joy Travel Services does NOT book any flight tickets. 
+                We only provide digital & marketing services for travel companies.
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -54,7 +60,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
-                <span>123 Business District, Tech City, TC 12345</span>
+                <span>Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4 flex-shrink-0 text-primary" />

@@ -169,8 +169,9 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold mb-2">Office Address</h3>
                           <p className="text-muted-foreground">
-                            123 Business District<br />
-                            Tech City, TC 12345
+                            Showroom No. 305,<br />
+                            Green Lotus Saksham Commercial,<br />
+                            ZIRAKPUR, Punjab 140603.
                           </p>
                         </div>
                       </div>
