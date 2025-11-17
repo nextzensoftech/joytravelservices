@@ -17,10 +17,19 @@ import {
   MessageSquare,
   Palette,
 } from "lucide-react";
+import serviceWebsite from "@/assets/service-website.jpg";
+import serviceSeo from "@/assets/service-seo.jpg";
+import serviceSocial from "@/assets/service-social.jpg";
+import serviceCrm from "@/assets/service-crm.jpg";
+import serviceAutomation from "@/assets/service-automation.jpg";
+import serviceBranding from "@/assets/service-branding.jpg";
+import serviceMarketing from "@/assets/service-marketing.jpg";
+import serviceContent from "@/assets/service-content.jpg";
 
 const services = [
   {
     icon: Globe,
+    image: serviceWebsite,
     title: "Custom Travel Website Development",
     description: "We create stunning, user-friendly websites specifically designed for travel agencies. Our websites are:",
     features: [
@@ -33,6 +42,7 @@ const services = [
   },
   {
     icon: TrendingUp,
+    image: serviceSeo,
     title: "SEO & Google Ranking Services",
     description: "Dominate search engine results and attract more customers with our comprehensive SEO services:",
     features: [
@@ -45,6 +55,7 @@ const services = [
   },
   {
     icon: Share2,
+    image: serviceSocial,
     title: "Social Media Management",
     description: "Build a strong social media presence across all major platforms:",
     features: [
@@ -57,6 +68,7 @@ const services = [
   },
   {
     icon: Database,
+    image: serviceCrm,
     title: "CRM Setup & Management",
     description: "Streamline your operations with powerful CRM solutions:",
     features: [
@@ -69,6 +81,7 @@ const services = [
   },
   {
     icon: Zap,
+    image: serviceAutomation,
     title: "WhatsApp & Email Automation",
     description: "Save time and enhance customer engagement with intelligent automation:",
     features: [
@@ -81,6 +94,7 @@ const services = [
   },
   {
     icon: PenTool,
+    image: serviceBranding,
     title: "Travel Branding & Graphic Design",
     description: "Stand out with professional branding and design services:",
     features: [
@@ -93,6 +107,7 @@ const services = [
   },
   {
     icon: BarChart,
+    image: serviceMarketing,
     title: "Digital Marketing Campaigns",
     description: "Reach your target audience with data-driven marketing strategies:",
     features: [
@@ -105,6 +120,7 @@ const services = [
   },
   {
     icon: Search,
+    image: serviceContent,
     title: "Content Creation & Copywriting",
     description: "Engage your audience with compelling, travel-focused content:",
     features: [
@@ -138,17 +154,25 @@ const Services = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="border-2 hover:border-primary transition-colors">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <service.icon className="w-7 h-7 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                        <p className="text-muted-foreground mb-4">{service.description}</p>
+                <Card key={index} className="border-2 hover:border-primary transition-colors overflow-hidden group">
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-lg bg-primary/90 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                          <service.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white">{service.title}</h3>
                       </div>
                     </div>
+                  </div>
+                  <CardContent className="p-8">
+                    <p className="text-muted-foreground mb-4">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-2">
