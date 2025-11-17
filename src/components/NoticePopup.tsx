@@ -14,13 +14,12 @@ const NoticePopup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const hasSeenNotice = sessionStorage.getItem("hasSeenNotice");
-    if (!hasSeenNotice) {
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 2000);
-      return () => clearTimeout(timer);
-    }
+    // Clear the session storage to ensure popup shows
+    sessionStorage.removeItem("hasSeenNotice");
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 2000);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
