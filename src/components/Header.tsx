@@ -46,7 +46,7 @@ const Header = () => {
 
       {/* Main Header */}
       <header
-        className={`fixed top-10 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-8 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-background"
         }`}
       >
