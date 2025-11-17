@@ -2,6 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Award, Users } from "lucide-react";
+import aboutTeam from "@/assets/about-team.jpg";
+import aboutOffice from "@/assets/about-office.jpg";
+import aboutProcess1 from "@/assets/about-process1.jpg";
+import aboutProcess2 from "@/assets/about-process2.jpg";
+import aboutProcess3 from "@/assets/about-process3.jpg";
+import aboutProcess4 from "@/assets/about-process4.jpg";
 
 const About = () => {
   return (
@@ -22,22 +28,57 @@ const About = () => {
         {/* Company Overview */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Who We Are</h2>
-              <div className="space-y-4 text-lg text-muted-foreground">
-                <p>
-                  Joy Travel Services is a specialized digital services provider dedicated exclusively to the travel industry. 
-                  We understand the unique challenges and opportunities that travel agencies face in today's digital landscape.
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Who We Are</h2>
+                <div className="space-y-4 text-lg text-muted-foreground">
+                  <p>
+                    Joy Travel Services is a specialized digital services provider dedicated exclusively to the travel industry. 
+                    We understand the unique challenges and opportunities that travel agencies face in today's digital landscape.
+                  </p>
+                  <p>
+                    With years of experience working with travel businesses of all sizes, we've developed a comprehensive suite 
+                    of services designed to help travel agencies establish a strong online presence, streamline their operations, 
+                    and grow their customer base.
+                  </p>
+                  <p>
+                    Our team combines deep expertise in web development, digital marketing, CRM systems, and travel industry 
+                    best practices to deliver solutions that drive real results for our clients.
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src={aboutTeam} 
+                    alt="Joy Travel Services Team"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-xl max-w-xs">
+                  <p className="text-sm font-medium">Our dedicated team of digital experts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Office Showcase */}
+        <section className="py-20 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Workspace</h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  A modern, collaborative environment where innovation meets creativity
                 </p>
-                <p>
-                  With years of experience working with travel businesses of all sizes, we've developed a comprehensive suite 
-                  of services designed to help travel agencies establish a strong online presence, streamline their operations, 
-                  and grow their customer base.
-                </p>
-                <p>
-                  Our team combines deep expertise in web development, digital marketing, CRM systems, and travel industry 
-                  best practices to deliver solutions that drive real results for our clients.
-                </p>
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src={aboutOffice} 
+                  alt="Joy Travel Services Office"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
@@ -127,6 +168,110 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* Our Process */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">How We Work</h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Our proven process ensures successful delivery of every project
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={aboutProcess1} 
+                      alt="Strategy & Planning"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                          1
+                        </div>
+                        <h3 className="text-xl font-bold text-white">Strategy & Planning</h3>
+                      </div>
+                      <p className="text-white/90 text-sm">
+                        We collaborate with you to understand your goals and create a tailored strategy
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={aboutProcess2} 
+                      alt="Development & Design"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                          2
+                        </div>
+                        <h3 className="text-xl font-bold text-white">Development & Design</h3>
+                      </div>
+                      <p className="text-white/90 text-sm">
+                        Our experts bring your vision to life with cutting-edge technology and design
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={aboutProcess3} 
+                      alt="Testing & Launch"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                          3
+                        </div>
+                        <h3 className="text-xl font-bold text-white">Testing & Launch</h3>
+                      </div>
+                      <p className="text-white/90 text-sm">
+                        Rigorous testing ensures everything works perfectly before your successful launch
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={aboutProcess4} 
+                      alt="Support & Growth"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                          4
+                        </div>
+                        <h3 className="text-xl font-bold text-white">Support & Growth</h3>
+                      </div>
+                      <p className="text-white/90 text-sm">
+                        Ongoing support and optimization to help your business continue to grow
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Years of Experience */}
         <section className="py-20 bg-secondary/30">
