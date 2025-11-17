@@ -117,7 +117,7 @@ const Privacy = () => {
                 <br />
                 Email: info@joytravelservices.com
                 <br />
-                Phone: +1 (234) 567-890
+                Phone: +91 90566 62515
                 <br />
                 Address: 123 Business District, Tech City, TC 12345
               </p>

@@ -117,7 +117,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (234) 567-890"
+                      placeholder="+91 90566 62515"
                     />
                   </div>
 
@@ -206,10 +206,10 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold mb-2">Call Us</h3>
                           <a
-                            href="tel:+1234567890"
+                            href="tel:+919056662515"
                             className="text-primary hover:underline"
                           >
-                            +1 (234) 567-890
+                            +91 90566 62515
                           </a>
                         </div>
                       </div>

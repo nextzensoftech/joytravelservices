@@ -102,7 +102,7 @@ const Terms = () => {
                 <br />
                 Email: info@joytravelservices.com
                 <br />
-                Phone: +1 (234) 567-890
+                Phone: +91 90566 62515
               </p>
             </div>
           </div>
