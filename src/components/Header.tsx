@@ -73,14 +73,14 @@ const Header = () => {
             </nav>
 
             {/* Social Icons - Desktop */}
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary transition-all flex items-center justify-center group"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" />
