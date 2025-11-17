@@ -6,7 +6,7 @@ const Privacy = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-[120px]">
+     <main className="pt-10 lg:pt-[112px]">
         {/* Page Header */}
         <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
           <div className="container mx-auto px-4 text-center">
