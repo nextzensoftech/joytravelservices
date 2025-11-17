@@ -138,11 +138,11 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-[120px]">
+      <main className="pt-[112px] sm:pt-[120px]">
         {/* Page Header */}
-        <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Our Services</h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Comprehensive digital solutions tailored for travel agencies
             </p>
@@ -155,29 +155,29 @@ const Services = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {services.map((service, index) => (
                 <Card key={index} className="border-2 hover:border-primary transition-colors overflow-hidden group">
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
                     <img 
                       src={service.image} 
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-lg bg-primary/90 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                          <service.icon className="w-6 h-6 text-white" />
+                    <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/90 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                          <service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                         </div>
-                        <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-white">{service.title}</h3>
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-8">
-                    <p className="text-muted-foreground mb-4">{service.description}</p>
-                    <ul className="space-y-2">
+                  <CardContent className="p-5 sm:p-6 md:p-8">
+                    <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">{service.description}</p>
+                    <ul className="space-y-1.5 sm:space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                          <span className="text-sm text-muted-foreground">{feature}</span>
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 sm:mt-2 flex-shrink-0" />
+                          <span className="text-xs sm:text-sm text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -189,18 +189,18 @@ const Services = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-secondary/30">
+        <section className="py-12 sm:py-16 md:py-20 bg-secondary/30">
           <div className="container mx-auto px-4">
             <Card className="max-w-4xl mx-auto border-2 border-primary/20">
-              <CardContent className="p-12 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <CardContent className="p-6 sm:p-8 md:p-12 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-2">
                   Ready to Elevate Your Travel Business?
                 </h2>
-                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
                   Let's discuss how our services can help you achieve your business goals. 
                   Get in touch with us today for a free consultation.
                 </p>
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="w-full sm:w-auto">
                   <Link to="/contact">Schedule a Consultation</Link>
                 </Button>
               </CardContent>

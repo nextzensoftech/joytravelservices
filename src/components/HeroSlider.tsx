@@ -47,7 +47,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative h-[600px] overflow-hidden">
+    <div className="relative h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -64,17 +64,17 @@ const HeroSlider = () => {
           </div>
           <div className="relative container mx-auto px-4 h-full flex items-center">
             <div className="max-w-3xl text-white">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 {slide.title}
               </h1>
-              <p className="text-lg md:text-xl mb-8 text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
+              <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-8 text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
                 {slide.subtitle}
               </p>
-              <div className="flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-                <Button asChild size="lg" variant="secondary">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+                <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
                   <Link to="/services">Our Services</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+                <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 border-white text-white hover:bg-white hover:text-primary">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
@@ -86,27 +86,27 @@ const HeroSlider = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors flex items-center justify-center"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors flex items-center justify-center"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors flex items-center justify-center"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors flex items-center justify-center"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentSlide ? "bg-white w-8" : "bg-white/50"
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
+              index === currentSlide ? "bg-white w-6 sm:w-8" : "bg-white/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

@@ -21,15 +21,15 @@ const Footer = () => {
 
   return (
     <footer className="bg-card border-t">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-8 sm:py-10 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand */}
-          <div>
-            <img src={logo} alt="Joy Travel Services" className="h-12 w-auto mb-4" />
-            <p className="text-sm text-muted-foreground mb-4">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <img src={logo} alt="Joy Travel Services" className="h-10 sm:h-12 w-auto mb-3 sm:mb-4" />
+            <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
               Empowering travel agencies with digital growth solutions.
             </p>
-            <div className="bg-accent/10 border border-accent/20 rounded-lg p-4 mb-4">
+            <div className="bg-accent/10 border border-accent/20 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
               <p className="text-xs text-foreground font-medium">
                 <strong>Important:</strong> Joy Travel Services does NOT book any flight tickets. 
                 We only provide digital & marketing services for travel companies.
@@ -39,14 +39,11 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.to}>
-                  <Link
-                    to={link.to}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <Link to={link.to} className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -56,48 +53,41 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact Us</h3>
+            <ul className="space-y-2 sm:space-y-3">
+              <li className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
+                <MapPin className="w-3 h-3 sm:w-4 sm:h-4 mt-0.5 flex-shrink-0 text-primary" />
                 <span>Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.</span>
               </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail className="w-4 h-4 flex-shrink-0 text-primary" />
-                <a href="mailto:info@joytravelservices.com" className="hover:text-primary transition-colors">
+              <li className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                <Mail className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 text-primary" />
+                <a href="mailto:info@joytravelservices.com" className="hover:text-primary transition-colors break-all">
                   info@joytravelservices.com
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4 flex-shrink-0 text-primary" />
-                <a href="tel:+919056662515" className="hover:text-primary transition-colors">
-                  +91 90566 62515
-                </a>
+              <li className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                <Phone className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 text-primary" />
+                <a href="tel:+919056662515" className="hover:text-primary transition-colors">+91 90566 62515</a>
               </li>
             </ul>
           </div>
 
           {/* Social Media */}
           <div>
-            <h3 className="font-semibold mb-4">Follow Us</h3>
-            <div className="flex gap-3">
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Follow Us</h3>
+            <div className="flex gap-2 sm:gap-3">
               {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
+                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  aria-label={social.label}>
+                  <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
+        <div className="border-t mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Joy Travel Services. All rights reserved.</p>
         </div>
       </div>
