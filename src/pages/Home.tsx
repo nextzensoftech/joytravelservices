@@ -81,7 +81,7 @@ const Home = () => {
       <Header />
       <NoticePopup />
 
-      <main className="pt-20">
+      <main className="pt-[120px]">
         {/* Hero Section */}
         <HeroSlider />
 
