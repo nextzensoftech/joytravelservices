@@ -101,8 +101,12 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className="lg:hidden py-4 border-t">
+          <div
+            className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+              isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="py-4 border-t animate-slide-in-right">
               <nav className="flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <Link
@@ -132,7 +136,7 @@ const Header = () => {
                 </div>
               </nav>
             </div>
-          )}
+          </div>
         </div>
       </header>
     </>
