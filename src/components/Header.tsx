@@ -25,9 +25,9 @@ const Header = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/joytravelservicesofficial", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/joytravelservicesofficial/", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/joy-travel-services/", label: "LinkedIn" },
     { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
   ];
 
