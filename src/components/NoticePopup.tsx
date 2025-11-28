@@ -9,11 +9,18 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
-import { AlertCircle, X } from "lucide-react";
+import { AlertCircle, X, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const NoticePopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  const socialLinks = [
+    { icon: Facebook, href: "https://www.facebook.com/joytravelservicesofficial", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/joytravelservicesofficial/", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/joy-travel-services/", label: "LinkedIn" },
+    { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  ];
 
   useEffect(() => {
     // Show popup on every page navigation
@@ -58,6 +65,31 @@ const NoticePopup = () => {
             </ul>
           </AlertDialogDescription>
         </AlertDialogHeader>
+        
+        {/* Address Section */}
+        <div className="border-t pt-4">
+          <div className="flex items-start gap-2 text-sm text-muted-foreground mb-3">
+            <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+            <p>Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.</p>
+          </div>
+          
+          {/* Social Icons */}
+          <div className="flex items-center justify-center gap-3">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary transition-all flex items-center justify-center"
+                aria-label={social.label}
+              >
+                <social.icon className="w-4 h-4" />
+              </a>
+            ))}
+          </div>
+        </div>
+        
         <AlertDialogFooter className="sm:justify-end">
           <Button onClick={handleClose} className="w-full sm:w-auto">
             I Understand
