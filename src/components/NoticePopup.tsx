@@ -91,7 +91,7 @@ const NoticePopup = () => {
         </div>
         
         <AlertDialogFooter className="sm:justify-end">
-          <Button onClick={handleClose} className="w-full sm:w-auto">
+          <Button onClick={handleClose} className="w-full">
             I Understand
           </Button>
         </AlertDialogFooter>
