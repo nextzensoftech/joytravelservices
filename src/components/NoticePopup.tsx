@@ -68,8 +68,8 @@ const NoticePopup = () => {
         
         {/* Address Section */}
         <div className="border-t pt-4">
-          <div className="flex items-start gap-2 text-sm text-muted-foreground mb-3">
-            <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+          <div className="flex items-start gap-2 text-base text-muted-foreground mb-3">
+            <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
             <p>Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.</p>
           </div>
           
