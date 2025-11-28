@@ -54,10 +54,15 @@ const Header = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
-              <img src={logo} alt="Joy Travel Services" className="h-12 w-auto" />
-            </Link>
+            {/* Logo & Address */}
+            <div className="flex flex-col gap-1">
+              <Link to="/" className="flex items-center gap-3">
+                <img src={logo} alt="Joy Travel Services" className="h-12 w-auto" />
+              </Link>
+              <p className="text-xs text-muted-foreground max-w-[200px] lg:max-w-[250px]">
+                123 Business Street, City, State 12345
+              </p>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
