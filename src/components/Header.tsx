@@ -60,7 +60,7 @@ const Header = () => {
                 <img src={logo} alt="Joy Travel Services" className="h-12 w-auto" />
               </Link>
               {/* Address - Mobile Only */}
-              <p className="lg:hidden text-xs text-muted-foreground max-w-[280px]">
+              <p className="lg:hidden text-sm text-muted-foreground text-center max-w-[320px]">
                 Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.
               </p>
             </div>
