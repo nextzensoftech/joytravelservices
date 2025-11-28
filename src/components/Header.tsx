@@ -60,10 +60,12 @@ const Header = () => {
                 <img src={logo} alt="Joy Travel Services" className="h-12 w-auto" />
               </Link>
               {/* Address - Mobile Only */}
-              <p className="lg:hidden text-sm text-muted-foreground text-center max-w-[320px] flex items-start gap-1.5 justify-center">
-                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.</span>
-              </p>
+              <div className="lg:hidden flex items-center gap-1.5 justify-center max-w-[320px] mx-auto">
+                <MapPin className="w-4 h-4 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground text-left">
+                  Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.
+                </p>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
