@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
-import NoticePopup from "@/components/NoticePopup";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -79,7 +78,6 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <NoticePopup />
 
       <main className="pt-10 lg:pt-[112px]">
         {/* Hero Section */}
