@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Facebook, Instagram, Linkedin, Youtube, AlertCircle } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Linkedin, Youtube, AlertCircle, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
@@ -60,8 +60,9 @@ const Header = () => {
                 <img src={logo} alt="Joy Travel Services" className="h-12 w-auto" />
               </Link>
               {/* Address - Mobile Only */}
-              <p className="lg:hidden text-sm text-muted-foreground text-center max-w-[320px]">
-                Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.
+              <p className="lg:hidden text-sm text-muted-foreground text-center max-w-[320px] flex items-start gap-1.5 justify-center">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.</span>
               </p>
             </div>
 
@@ -82,8 +83,9 @@ const Header = () => {
 
             {/* Address & Social Icons - Desktop */}
             <div className="hidden lg:flex items-center gap-6">
-              <p className="text-xs text-muted-foreground max-w-[300px]">
-                Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.
+              <p className="text-xs text-muted-foreground max-w-[300px] flex items-start gap-1.5">
+                <MapPin className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
+                <span>Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.</span>
               </p>
               <div className="flex items-center gap-3">
                 {socialLinks.map((social) => (
