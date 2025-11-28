@@ -30,7 +30,7 @@ const NoticePopup = () => {
 
   return (
     <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
-      <AlertDialogContent className="max-w-md mx-4 sm:mx-auto">
+      <AlertDialogContent className="max-w-md w-[calc(100%-2rem)] sm:w-full mx-auto">
         <button
           onClick={handleClose}
           className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none"
