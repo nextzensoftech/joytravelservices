@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   AlertDialog,
   AlertDialogContent,
@@ -12,19 +13,19 @@ import { AlertCircle } from "lucide-react";
 
 const NoticePopup = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    // Clear the session storage to ensure popup shows
-    sessionStorage.removeItem("hasSeenNotice");
+    // Show popup on every page navigation
+    setIsOpen(false); // Close first if already open
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 2000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]);
 
   const handleClose = () => {
     setIsOpen(false);
-    sessionStorage.setItem("hasSeenNotice", "true");
   };
 
   return (
