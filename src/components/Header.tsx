@@ -54,13 +54,14 @@ const Header = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            {/* Logo & Address */}
+            {/* Logo */}
             <div className="flex flex-col gap-1">
               <Link to="/" className="flex items-center gap-3">
                 <img src={logo} alt="Joy Travel Services" className="h-12 w-auto" />
               </Link>
-              <p className="text-xs text-muted-foreground max-w-[200px] lg:max-w-[250px]">
-                123 Business Street, City, State 12345
+              {/* Address - Mobile Only */}
+              <p className="lg:hidden text-xs text-muted-foreground max-w-[280px]">
+                Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.
               </p>
             </div>
 
@@ -79,20 +80,25 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Social Icons - Desktop */}
-            <div className="hidden lg:flex items-center gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary transition-all flex items-center justify-center group"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-4 h-4" />
-                </a>
-              ))}
+            {/* Address & Social Icons - Desktop */}
+            <div className="hidden lg:flex items-center gap-6">
+              <p className="text-xs text-muted-foreground max-w-[300px]">
+                Showroom No. 305, Green Lotus Saksham Commercial, ZIRAKPUR, Punjab 140603.
+              </p>
+              <div className="flex items-center gap-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary transition-all flex items-center justify-center group"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
